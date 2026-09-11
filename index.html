@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>釜山→ソウル 母息子旅のしおり るるぶ風</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gourmet:#FF7A1A;
+    --sight:#1E88E5;
+    --exp:#2FA84F;
+    --shop:#FF4D94;
+    --ink:#222222;
+    --paper:#FFFFFF;
+    --gourmet-tint:#FFF2E3;
+    --sight-tint:#E7F2FF;
+    --exp-tint:#E9FBF0;
+    --shop-tint:#FFECF5;
+    --ink-tint:#F1F1F4;
+  }
+  *{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  html,body{
+    margin:0;padding:0;font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);
+    background-color:#F4F1EA;
+    background-image:
+      radial-gradient(circle at 8% 12%, rgba(255,122,26,0.20) 0, transparent 34%),
+      radial-gradient(circle at 92% 8%, rgba(30,136,229,0.20) 0, transparent 34%),
+      radial-gradient(circle at 12% 92%, rgba(47,168,79,0.20) 0, transparent 34%),
+      radial-gradient(circle at 90% 85%, rgba(255,77,148,0.20) 0, transparent 34%),
+      radial-gradient(circle at 50% 50%, rgba(255,216,77,0.14) 0, transparent 45%);
+    background-attachment:fixed,fixed,fixed,fixed,fixed;
+  }
+  .page{max-width:920px;margin:24px auto;background:var(--paper);position:relative;box-shadow:0 16px 40px rgba(0,0,0,0.3);padding-bottom:20px;overflow:hidden;border-top:10px solid var(--ink);}
+  .page.tint-gourmet{background:var(--gourmet-tint);border-top-color:var(--gourmet);}
+  .page.tint-sight{background:var(--sight-tint);border-top-color:var(--sight);}
+  .page.tint-exp{background:var(--exp-tint);border-top-color:var(--exp);}
+  .page.tint-shop{background:var(--shop-tint);border-top-color:var(--shop);}
+  .page.tint-ink{background:var(--ink-tint);border-top-color:var(--ink);}
+  .page.cover{border-top-color:var(--ink);background:linear-gradient(135deg, var(--gourmet-tint) 0%, var(--sight-tint) 35%, var(--exp-tint) 65%, var(--shop-tint) 100%);}
+  .page + .page{margin-top:34px;}
+
+  .band{padding:16px 30px;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;color:#fff;font-size:26px;letter-spacing:.03em;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .band.gourmet{background:var(--gourmet);}
+  .band.sight{background:var(--sight);}
+  .band.exp{background:var(--exp);}
+  .band.shop{background:var(--shop);}
+  .band.ink{background:var(--ink);}
+  .band .small{font-size:13px;font-weight:700;opacity:.9;}
+  .solo-flag{
+    margin-left:auto;background:#fff;color:var(--ink);font-family:'Zen Maru Gothic',sans-serif;
+    font-weight:900;font-size:11px;padding:4px 12px;border-radius:20px;white-space:nowrap;
+  }
+
+  .chip{display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:11px;color:#fff;padding:3px 10px;border-radius:20px;letter-spacing:.05em;}
+  .chip.gourmet{background:var(--gourmet);}
+  .chip.sight{background:var(--sight);}
+  .chip.exp{background:var(--exp);}
+  .chip.shop{background:var(--shop);}
+
+  .content{padding:22px 30px 10px;}
+
+  .handwrite{font-family:'Yomogi',cursive;font-size:22px;color:var(--gourmet);display:inline-block;transform:rotate(-3deg);}
+
+  .collage{display:flex;gap:14px;flex-wrap:wrap;padding:6px 0 18px;}
+  .photo-block{
+    width:150px;height:150px;border-radius:2px;background:#fff;
+    padding:8px 8px 24px 8px;
+    box-shadow:0 6px 14px rgba(0,0,0,0.25);
+    position:relative;
+    overflow:visible;
+  }
+  .photo-block .frame{width:100%;height:100%;border-radius:1px;overflow:hidden;background:#eee;display:flex;align-items:center;justify-content:center;font-size:44px;}
+  .photo-block .frame img{width:100%;height:100%;object-fit:cover;display:block;}
+  .photo-block .cap{position:absolute;bottom:4px;left:0;right:0;text-align:center;font-family:'Yomogi',cursive;font-size:13px;color:#444;}
+  .photo-block.r1{transform:rotate(-6deg);}
+  .photo-block.r2{transform:rotate(4deg);}
+  .photo-block.r3{transform:rotate(-2deg);}
+  .photo-block.r4{transform:rotate(7deg);}
+  .swatch.gourmet{background:linear-gradient(135deg,#FFB27A,var(--gourmet));width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+  .swatch.sight{background:linear-gradient(135deg,#8FC4F5,var(--sight));width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+  .swatch.exp{background:linear-gradient(135deg,#A6E0B8,var(--exp));width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+  .swatch.shop{background:linear-gradient(135deg,#FFAFD3,var(--shop));width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+
+  .course-list{list-style:none;margin:0;padding:0;}
+  .course-item{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:2px dotted #ccc;}
+  .course-num{
+    flex:0 0 auto;width:34px;height:34px;border-radius:50%;
+    background:var(--ink);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px;
+  }
+  .course-num.gourmet{background:var(--gourmet);}
+  .course-num.sight{background:var(--sight);}
+  .course-num.exp{background:var(--exp);}
+  .course-num.shop{background:var(--shop);}
+  .course-body .time{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:12px;color:#777;}
+  .course-body .name{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px;margin:2px 0 3px;}
+  .course-body .desc{font-size:13px;color:#444;line-height:1.6;}
+
+  .bubble{
+    position:relative;background:#fff;border:3px solid var(--ink);border-radius:16px;
+    padding:10px 16px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13px;
+    display:inline-block;margin:10px 0;
+  }
+  .bubble::after{
+    content:"";position:absolute;bottom:-14px;left:24px;
+    border-width:14px 10px 0 0;border-style:solid;
+    border-color:var(--ink) transparent transparent transparent;
+  }
+  .bubble::before{
+    content:"";position:absolute;bottom:-10px;left:26px;
+    border-width:11px 8px 0 0;border-style:solid;
+    border-color:#fff transparent transparent transparent;
+    z-index:1;
+  }
+  .sticky{
+    display:inline-block;background:#FFF3A0;padding:8px 14px;font-family:'Yomogi',cursive;
+    font-size:14px;transform:rotate(-4deg);box-shadow:2px 3px 6px rgba(0,0,0,0.2);margin:8px 6px 8px 0;
+  }
+  .sticky.pink{background:#FFD6EA;}
+  .sticky.blue{background:#CFE8FF;}
+
+  .stamp-badge{
+    display:inline-flex;align-items:center;gap:4px;
+    border:3px solid var(--ink);border-radius:50px;
+    padding:4px 12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;
+    transform:rotate(-6deg);color:var(--ink);background:#fff;
+  }
+  .stamp-badge.must{border-color:var(--gourmet);color:var(--gourmet);}
+  .stamp-badge.local{border-color:var(--sight);color:var(--sight);}
+  .stamp-badge.new{border-color:var(--shop);color:var(--shop);}
+
+  .info-box{border:3px solid var(--ink);border-radius:10px;margin:20px 0;overflow:hidden;background:#fff;}
+  .info-box .box-photo{aspect-ratio:16/9;height:auto;display:flex;align-items:center;justify-content:center;font-size:64px;color:#fff;overflow:hidden;}
+  .info-box .box-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+  .info-box .box-photo.gourmet{background:linear-gradient(120deg,var(--gourmet),#FFC080);}
+  .info-box .box-photo.sight{background:linear-gradient(120deg,var(--sight),#8FD0FF);}
+  .info-box .box-photo.exp{background:linear-gradient(120deg,var(--exp),#9BE8B0);}
+  .info-box .box-photo.shop{background:linear-gradient(120deg,var(--shop),#FFB0DA);}
+  .info-box .box-body{padding:14px 18px 16px;}
+  .info-box .box-name{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;margin:0 0 2px;}
+  .info-box .box-catch{font-family:'Yomogi',cursive;font-size:15px;color:var(--gourmet);margin-bottom:8px;}
+  .info-box .box-desc{font-size:13.5px;line-height:1.75;color:#333;margin-bottom:12px;}
+  .info-box .box-meta{border-top:2px dashed #ccc;padding-top:8px;font-size:12.5px;color:#555;line-height:1.9;}
+  .info-box .stars{color:#FFB800;font-size:15px;letter-spacing:2px;}
+  .photo-credit{font-size:9.5px;color:#aaa;padding:3px 18px 0;}
+
+  .stars-note{font-size:10.5px;color:#999;margin-top:2px;}
+
+  .mini-map{display:flex;align-items:center;gap:6px;flex-wrap:wrap;background:#F5F5F5;border-radius:10px;padding:14px 16px;margin:16px 0;}
+  .pin{
+    display:flex;flex-direction:column;align-items:center;font-family:'Zen Maru Gothic',sans-serif;font-size:10px;font-weight:700;color:#444;
+  }
+  .pin .dot{width:26px;height:26px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;margin-bottom:3px;}
+  .map-arrow{color:#aaa;font-size:16px;}
+
+  h3.subhead2{
+    font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:15px;
+    display:inline-block;background:var(--ink);color:#fff;padding:5px 14px;border-radius:4px;margin:26px 0 14px;
+  }
+
+  .foot-tab{text-align:center;font-family:'Zen Maru Gothic',sans-serif;font-size:11px;color:#aaa;letter-spacing:.15em;padding:14px 0 6px;}
+
+  .cover{padding:0;}
+  .cover-top{background:var(--ink);color:#fff;text-align:center;padding:34px 20px 26px;}
+  .cover-top .kicker{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;letter-spacing:.3em;color:#FFD84D;margin-bottom:10px;}
+  .cover-top h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:44px;margin:0;line-height:1.15;}
+  .cover-top h1 .accent{color:#FFD84D;}
+  .cover-top .catch{font-family:'Yomogi',cursive;font-size:19px;margin-top:10px;color:#FFD84D;}
+  .cover-collage{padding:20px 24px;}
+  .cover-chips{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:0 20px 22px;}
+  .cover-chip{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:12px;background:#FFD84D;color:var(--ink);padding:6px 14px;border-radius:20px;border:2px solid var(--ink);}
+
+  .two-col{display:grid;grid-template-columns:1.1fr 0.9fr;gap:24px;padding:6px 30px 30px;}
+  .checklist{list-style:none;margin:0;padding:0;}
+  .checklist li{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:2px dotted #ccc;font-size:13.5px;}
+  .checklist li::before{content:"";flex:0 0 auto;width:16px;height:16px;border:3px solid var(--ink);border-radius:4px;margin-top:2px;}
+  .phrase-box{background:#F5F5F5;border-radius:10px;padding:16px 18px;}
+  .phrase-row{display:flex;justify-content:space-between;font-size:13px;padding:8px 0;border-bottom:1px solid #ddd;}
+  .phrase-row .kr{font-weight:900;font-family:'Zen Maru Gothic',sans-serif;color:var(--ink);}
+  .phrase-row .jp{color:#666;font-size:12px;}
+
+  @media print{
+    body{background:#fff;}
+    .page{box-shadow:none;margin:0;max-width:100%;}
+    .page{page-break-after:always;}
+  }
+  @media (max-width:640px){
+    .two-col{grid-template-columns:1fr;}
+    .cover-top h1{font-size:30px;}
+    .content,.two-col,.cover-collage,.cover-chips{padding-left:16px;padding-right:16px;}
+    .photo-block{width:110px;height:110px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ 表紙 ============ -->
+<div class="page cover">
+  <div class="cover-top">
+    <div class="kicker">MOTHER ＆ SON TRIP GUIDE</div>
+    <h1>釜山<span class="accent">→</span>ソウル<br>母息子楽しい韓国旅</h1>
+    <div class="catch">眉アートも、アカスリも、鮑粥も、ぜんぶ欲張る4泊5日！</div>
+  </div>
+  <div class="cover-collage collage" style="justify-content:center;">
+    <div class="photo-block r1"><div class="frame"><img src="images/gwangan_bridge.jpg" alt="広安大橋"></div><div class="cap">釜山・広安大橋</div></div>
+    <div class="photo-block r2"><div class="frame"><img src="images/jeonbokjuk.jpg" alt="鮑粥"></div><div class="cap">鮑粥</div></div>
+    <div class="photo-block r3"><div class="frame"><img src="images/ganjang_gejang.jpg" alt="カンジャンケジャン"></div><div class="cap">カンジャンケジャン</div></div>
+    <div class="photo-block r4"><div class="frame"><img src="images/myeongdong_night.jpg" alt="明洞"></div><div class="cap">明洞</div></div>
+  </div>
+  <div class="cover-chips">
+    <div class="cover-chip">✈ 成田→金海</div>
+    <div class="cover-chip">🚄 KTXで釜山→ソウル</div>
+    <div class="cover-chip">🏨 アベンツリー釜山</div>
+    <div class="cover-chip">🏨 ナインツリー明洞2</div>
+  </div>
+</div>
+
+<!-- ============ DAY 1 ============ -->
+<div class="page tint-exp">
+  <div class="band exp">DAY 1 <span class="small">10/13（火）｜到着・純豆腐・眉アート×アカスリ</span></div>
+  <div class="content">
+    <span class="handwrite">釜山、着いた瞬間からもう楽しい…！</span>
+
+    <div class="collage">
+      <div class="photo-block r1"><div class="frame"><img src="images/avantree_busan.jpg" alt="アベンツリー釜山"></div><div class="cap">アベンツリー釜山</div></div>
+      <div class="photo-block r2"><div class="frame"><img src="images/sundubu.jpg" alt="純豆腐"></div><div class="cap">純豆腐ランチ</div></div>
+      <div class="photo-block r3"><div class="frame"><img src="images/akasuri_mitt.jpg" alt="アカスリ"></div><div class="cap">アカスリ</div></div>
+      <div class="photo-block r4"><div class="frame"><img src="images/ganjang_gejang.jpg" alt="カンジャンケジャン"></div><div class="cap">カンジャンケジャン</div></div>
+    </div>
+
+    <h3 class="subhead2">本日のモデルコース</h3>
+    <ul class="course-list">
+      <li class="course-item">
+        <div class="course-num sight">1</div>
+        <div class="course-body"><span class="chip sight">観光</span> <span class="time">午後着</span>
+          <div class="name">金海国際空港 到着</div>
+          <div class="desc">到着ロビーに一歩出たら、そこはもう韓国モード。荷物を受け取ったらホテルへ出発！</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num exp">2</div>
+        <div class="course-body"><span class="chip exp">体験</span> <span class="time">15:00〜</span>
+          <div class="name">ホテル アベンツリー釜山 チェックイン</div>
+          <div class="desc">国際市場から徒歩3分、チャガルチ駅からも徒歩圏内。南浦洞のど真ん中で、翌日の動きが最高にラクな立地。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num gourmet">3</div>
+        <div class="course-body"><span class="chip gourmet">グルメ</span> <span class="time">15:30頃</span>
+          <div class="name">純豆腐（スンドゥブ）ランチ</div>
+          <div class="desc">辛さがじんわり効いたスンドゥブチゲでお腹を満たしてから、午後の体験タイムへ出発。</div>
+        </div>
+      </li>
+    </ul>
+
+    <h3 class="subhead2">午後：ママ＆ひろ 交代で「眉アート」×「アカスリ」</h3>
+    <div class="bubble">ふたり同時にサロン＆チムジルバンへ！片方が終わったら交代して、両方まるっと体験。</div>
+    <div class="two-col" style="grid-template-columns:1fr 1fr;padding:6px 0 4px;">
+      <div>
+        <div class="stamp-badge">ママ</div>
+        <ul class="course-list">
+          <li class="course-item">
+            <div class="course-body"><span class="chip exp">体験</span> <span class="time">16:00〜17:00</span>
+              <div class="name">眉アート施術</div>
+              <div class="desc">店名・予約時間は下の情報ボックスに書き込んでね。</div>
+            </div>
+          </li>
+          <li class="course-item">
+            <div class="course-body"><span class="chip exp">体験</span> <span class="time">17:00〜18:00</span>
+              <div class="name">アカスリ</div>
+              <div class="desc">眉アートを終えたママが、先に始めていたひろと合流。</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="stamp-badge">ひろ</div>
+        <ul class="course-list">
+          <li class="course-item">
+            <div class="course-body"><span class="chip exp">体験</span> <span class="time">16:00〜17:00</span>
+              <div class="name">アカスリ</div>
+              <div class="desc">ママが眉アートをしている間に、ひろは先にひとっ風呂＆アカスリ。</div>
+            </div>
+          </li>
+          <li class="course-item">
+            <div class="course-body"><span class="chip exp">体験</span> <span class="time">17:00〜18:00</span>
+              <div class="name">眉アート施術</div>
+              <div class="desc">ママと交代で施術スタート。</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="course-list">
+      <li class="course-item">
+        <div class="course-num gourmet">4</div>
+        <div class="course-body"><span class="chip gourmet">グルメ</span> <span class="time">19:00頃</span>
+          <div class="name">南浦洞でカンジャンケジャン</div>
+          <div class="desc">醤油だれに漬け込んだ生ガニを、ご飯と一緒にかき込む背徳のおいしさ。つるつるになった眉と肌で迎える、旅初日の締めくくり。</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="info-box">
+      <div class="box-photo exp">✨</div>
+      <div class="box-body">
+        <div class="box-name">眉アート（釜山で予約済み）</div>
+        <div class="box-catch">ママとひろ、交代で受ける本日のメインイベント！</div>
+        <div class="box-desc">店名・時間はまだ空欄なので手書きで埋めてね。ママの施術中はひろが先にアカスリへ、終わったら交代で入れ替わり。</div>
+        <div class="box-meta">
+          📍 店名：＿＿＿＿＿＿＿＿＿＿＿＿<br>
+          🕐 予約時間：＿＿＿＿＿＿＿＿＿＿<br>
+          💰 施術メニュー：＿＿＿＿＿＿＿＿＿
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subhead2">📍 情報ボックス：アカスリ</h3>
+    <div class="info-box">
+      <div class="box-photo exp"><img src="images/akasuri_mitt.jpg" alt="アカスリ用イタリータオル"></div>
+      <div class="box-body">
+        <div class="box-name">アカスリ（チムジルバン）</div>
+        <div class="box-catch">旅の疲れも角質も、まるごと洗い流す韓国式スクラブ！</div>
+        <div class="box-desc">専用の「イタリータオル」でゴシゴシ全身の角質オフ。施術自体は15〜30分ほどで、終わった後の肌はつるっつる。前後の水分補給を忘れずに。</div>
+        <div class="box-meta">
+          📍 店名：＿＿＿＿＿＿＿＿＿＿＿＿<br>
+          🕐 時間：＿＿＿＿＿＿＿＿＿＿<br>
+          💰 料金：＿＿＿＿＿＿＿＿＿
+        </div>
+      </div>
+      <div class="photo-credit">Photo: Wikimedia Commons（CCライセンス）</div>
+    </div>
+
+    <h3 class="subhead2">📍 情報ボックス：泊まる場所</h3>
+    <div class="info-box">
+      <div class="box-photo sight"><img src="images/avantree_busan.jpg" alt="ホテル アベンツリー釜山"></div>
+      <div class="box-body">
+        <div class="box-name">ホテル アベンツリー釜山</div>
+        <div class="box-catch">この立地、反則級に便利すぎる…！</div>
+        <div class="box-desc">国際市場・チャガルチ市場・BIFF広場が全部歩ける距離。翌日のKTX移動まで、動きやすさを考えたらここ一択。</div>
+        <div class="box-meta">
+          📍 釜山市中区・国際市場から徒歩約3分／チャガルチ駅から徒歩約6分<br>
+          🕐 チェックイン15:00〜／チェックアウト11:00まで<br>
+          💰 客室タイプにより変動（予約サイトで確認）
+        </div>
+      </div>
+      <div class="photo-credit">Photo: Trip.com掲載のホテル公式写真</div>
+    </div>
+  </div>
+  <div class="foot-tab">釜山→ソウル母息子楽しい韓国旅 ・ DAY 1</div>
+</div>
+
+<!-- ============ DAY 2 ============ -->
+<div class="page tint-exp">
+  <div class="band exp">DAY 2 <span class="small">10/14（水）｜KTXで釜山→ソウルへ</span></div>
+  <div class="content">
+    <span class="handwrite">いよいよソウルへ大移動！</span>
+
+    <div class="collage">
+      <div class="photo-block r2"><div class="frame"><img src="images/ktx.jpg" alt="KTX"></div><div class="cap">KTX</div></div>
+      <div class="photo-block r3"><div class="frame"><img src="images/ninetree_myeongdong.jpg" alt="ナインツリー明洞2"></div><div class="cap">ナインツリー明洞2</div></div>
+    </div>
+
+    <h3 class="subhead2">本日のモデルコース</h3>
+    <ul class="course-list">
+      <li class="course-item">
+        <div class="course-num sight">1</div>
+        <div class="course-body"><span class="chip sight">観光</span> <span class="time">13:00頃</span>
+          <div class="name">ホテル チェックアウト＆釜山駅へ</div>
+          <div class="desc">南浦洞から釜山駅は車で約10分。荷物があるので余裕を持って移動を。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num sight">2</div>
+        <div class="course-body"><span class="chip sight">観光</span> <span class="time">所要2.5〜3h</span>
+          <div class="name">KTXで釜山駅→ソウル駅</div>
+          <div class="desc">「韓国版新幹線」で一気にソウルへ！車窓の景色を楽しみながらの移動時間も旅の醍醐味。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num exp">3</div>
+        <div class="course-body"><span class="chip exp">体験</span> <span class="time">18:00頃</span>
+          <div class="name">NINE TREE BY PARNAS SEOUL MYEONGDONG II 到着</div>
+          <div class="desc">乙支路3街駅から徒歩約4分。明洞のど真ん中で、ここからのベースキャンプ！</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num gourmet">4</div>
+        <div class="course-body"><span class="chip gourmet">グルメ</span> <span class="time">19:30頃</span>
+          <div class="name">明洞で夕食</div>
+          <div class="desc">移動日の締めは、明洞の食堂でホッとする一皿を。</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="mini-map">
+      <div class="pin"><div class="dot" style="background:var(--sight)">1</div>釜山駅</div>
+      <div class="map-arrow">🚄</div>
+      <div class="pin"><div class="dot" style="background:var(--sight)">2</div>ソウル駅</div>
+      <div class="map-arrow">→</div>
+      <div class="pin"><div class="dot" style="background:var(--exp)">3</div>明洞ホテル</div>
+    </div>
+
+    <h3 class="subhead2">📍 情報ボックス：ソウルの宿</h3>
+    <div class="info-box">
+      <div class="box-photo sight"><img src="images/ninetree_myeongdong.jpg" alt="NINE TREE BY PARNAS SEOUL MYEONGDONG II"></div>
+      <div class="box-body">
+        <div class="box-name">NINE TREE BY PARNAS SEOUL MYEONGDONG II（나인트리 바이 파르나스）</div>
+        <div class="box-catch">明洞のど真ん中、ここから毎日が始まる！</div>
+        <div class="box-desc">乙支路3街駅から徒歩約4分、明洞大聖堂から徒歩7分。明洞・南大門・東大門どこへ行くのもアクセス良好。</div>
+        <div class="box-meta">
+          📍 28 Mareunnae-ro, Jung-gu, Seoul（乙支路3街駅から徒歩約4分）<br>
+          🕐 チェックイン15:00〜／チェックアウト12:00まで<br>
+          💰 客室タイプにより変動（公式サイト：ninetreehotels.com/nth2）
+        </div>
+      </div>
+      <div class="photo-credit">Photo: Trip.com掲載のホテル公式写真</div>
+    </div>
+  </div>
+  <div class="foot-tab">釜山→ソウル母息子楽しい韓国旅 ・ DAY 2</div>
+</div>
+
+<!-- ============ DAY 3 ============ -->
+<div class="page tint-sight">
+  <div class="band sight">DAY 3 <span class="small">10/15（木）｜最後の食いおさめ＆息子帰国</span><span class="solo-flag">午後から母ひとり旅スタート</span></div>
+  <div class="content">
+    <span class="handwrite">最後の朝は鮑粥、最後の昼は参鶏湯。ぜんぶ食べて帰る！</span>
+
+    <div class="collage">
+      <div class="photo-block r1"><div class="frame"><img src="images/jeonbokjuk.jpg" alt="鮑粥"></div><div class="cap">瑞源の鮑粥</div></div>
+      <div class="photo-block r2"><div class="frame"><img src="images/gyeongbokgung.jpg" alt="景福宮"></div><div class="cap">景福宮</div></div>
+      <div class="photo-block r3"><div class="frame"><img src="images/samgyetang.jpg" alt="参鶏湯"></div><div class="cap">土俗村参鶏湯</div></div>
+    </div>
+
+    <h3 class="subhead2">本日のモデルコース（午前：二人一緒）</h3>
+    <ul class="course-list">
+      <li class="course-item">
+        <div class="course-num gourmet">1</div>
+        <div class="course-body"><span class="chip gourmet">グルメ</span> <span class="time">7:30</span>
+          <div class="name">瑞源（ソウォン）で鮑粥の朝食</div>
+          <div class="desc">明洞で長年愛される粥専門店。アワビの旨みがじんわり染み込んだお粥は、あっさりなのにコクがあって朝の胃にもやさしい。混雑しやすいので朝早めが正解。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num sight">2</div>
+        <div class="course-body"><span class="chip sight">観光</span> <span class="time">9:30</span>
+          <div class="name">景福宮を散策</div>
+          <div class="desc">韓服レンタルで入場無料になることも。写真を撮りながらゆったり歩くのが正解ルート。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num gourmet">3</div>
+        <div class="course-body"><span class="chip gourmet">グルメ</span> <span class="time">12:00</span>
+          <div class="name">土俗村参鶏湯で最後のランチ</div>
+          <div class="desc">丸鶏にもち米・松の実・栗をぎゅっと詰めた一杯。旅の最後にふさわしい、体の芯からあたたまるご褒美ごはん。</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="bubble">ここまでで鮑粥・カンジャンケジャン・参鶏湯、リクエストは全部食べ切った！🎉</div>
+
+    <h3 class="subhead2">午後：息子は帰国、母はソウルひとり旅へ</h3>
+    <ul class="course-list">
+      <li class="course-item">
+        <div class="course-num sight">4</div>
+        <div class="course-body"><span class="chip sight">観光</span> <span class="time"><u>&nbsp;&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;&nbsp;&nbsp;</u></span>
+          <div class="name">（息子）空港へ移動・帰国</div>
+          <div class="desc">仁川ならA'REXで約1時間、金浦なら地下鉄で30〜40分が目安。フライト時間から逆算して出発を。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num shop">5</div>
+        <div class="course-body"><span class="chip shop">ショッピング</span> <span class="time">午後〜</span>
+          <div class="name">（母）明洞でひとり時間スタート</div>
+          <div class="desc">ここから2日間は母のペースで、気になるお店をじっくり見て回れる自由時間。</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="foot-tab">釜山→ソウル母息子楽しい韓国旅 ・ DAY 3</div>
+</div>
+
+<!-- ============ DAY 4 ============ -->
+<div class="page tint-shop">
+  <div class="band shop">DAY 4 <span class="small">10/16（金）｜母ひとりのショッピングデー</span><span class="solo-flag">母ひとり旅</span></div>
+  <div class="content">
+    <span class="handwrite">今日は自分のペースで、好きなだけ買い物する日！</span>
+
+    <div class="collage">
+      <div class="photo-block r1"><div class="frame"><img src="images/myeongdong_night.jpg" alt="明洞"></div><div class="cap">明洞</div></div>
+      <div class="photo-block r3"><div class="frame swatch shop">💍</div><div class="cap">明洞チェリー</div></div>
+    </div>
+
+    <h3 class="subhead2">本日のモデルコース</h3>
+    <ul class="course-list">
+      <li class="course-item">
+        <div class="course-num shop">1</div>
+        <div class="course-body"><span class="chip shop">ショッピング</span> <span class="time">10:30</span>
+          <div class="name">明洞チェリー（アクセサリー）でゆっくり買い物</div>
+          <div class="desc">総合市場のように色々なアクセサリーが揃うお店。混雑状況はInstagramのハイライトで確認しておくと安心。DM対応は10:00〜22:00。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num gourmet">2</div>
+        <div class="course-body"><span class="chip gourmet">グルメ</span> <span class="time">13:00</span>
+          <div class="name">明洞でひとりランチ</div>
+          <div class="desc">屋台グルメでも、ゆったり座れるお店でも。気分に合わせて自由に。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num shop">3</div>
+        <div class="course-body"><span class="chip shop">ショッピング</span> <span class="time">14:30</span>
+          <div class="name">明洞メインストリートで買い物継続</div>
+          <div class="desc">コスメの試供品めぐりも一人だとじっくり楽しめる。気になったお店には遠慮なく入ってみて。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num exp">4</div>
+        <div class="course-body"><span class="chip exp">体験</span> <span class="time">18:00</span>
+          <div class="name">夜カフェでひとり時間</div>
+          <div class="desc">戦利品を眺めながら、今日一日を振り返るご褒美タイム。</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="sticky">サブバッグ必須！戦利品で荷物増えがち説</div>
+  </div>
+  <div class="foot-tab">釜山→ソウル母息子楽しい韓国旅 ・ DAY 4</div>
+</div>
+
+<!-- ============ DAY 5 ============ -->
+<div class="page tint-ink">
+  <div class="band ink">DAY 5 <span class="small">10/17（土）｜最終日＆帰国</span><span class="solo-flag">母ひとり旅</span></div>
+  <div class="content">
+    <span class="handwrite">最後の一日、ゆっくり締めくくろう。</span>
+
+    <h3 class="subhead2">本日のモデルコース</h3>
+    <ul class="course-list">
+      <li class="course-item">
+        <div class="course-num shop">1</div>
+        <div class="course-body"><span class="chip shop">ショッピング</span> <span class="time">10:00</span>
+          <div class="name">明洞で最後のお土産タイム</div>
+          <div class="desc">お菓子系はコンビニ・スーパーでも手頃に買えるので最終調整にぴったり。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num sight">2</div>
+        <div class="course-body"><span class="chip sight">観光</span> <span class="time">11:00</span>
+          <div class="name">ホテル チェックアウト</div>
+          <div class="desc">チェックアウトは12:00まで。荷物整理はゆとりを持って。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num sight">3</div>
+        <div class="course-body"><span class="chip sight">観光</span> <span class="time">12:30頃</span>
+          <div class="name">空港へ移動</div>
+          <div class="desc">仁川ならA'REXで約1時間、金浦なら地下鉄で30〜40分が目安。</div>
+        </div>
+      </li>
+      <li class="course-item">
+        <div class="course-num sight">4</div>
+        <div class="course-body"><span class="chip sight">観光</span> <span class="time"><u>&nbsp;&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;&nbsp;&nbsp;</u></span>
+          <div class="name">仁川/金浦国際空港 発 → 成田空港 着</div>
+          <div class="desc">出発2時間前を目安にチェックイン開始。ひとりでのソウル時間、お疲れ様でした！</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="bubble">4泊5日、お疲れ様でした！また一緒に行こうね〜！</div>
+  </div>
+  <div class="foot-tab">釜山→ソウル母息子楽しい韓国旅 ・ DAY 5</div>
+</div>
+
+<!-- ============ 持ち物＆フレーズ ============ -->
+<div class="page tint-gourmet">
+  <div class="band ink">PREP <span class="small">持ち物＆使えるひとこと</span></div>
+  <div class="two-col">
+    <div>
+      <h3 class="subhead2">🧳 持ち物チェックリスト</h3>
+      <ul class="checklist">
+        <li>パスポート（有効期限確認）</li>
+        <li>韓国ウォンの現金（少額）＋クレジットカード</li>
+        <li>モバイルWi-Fi or SIM</li>
+        <li>眉アート後のケア用品（保湿クリームなど）</li>
+        <li>羽織れる上着（10月の釜山・ソウルは朝晩涼しめ）</li>
+        <li>歩きやすい靴（市場・宮殿・坂道が多い日用）</li>
+        <li>折りたたみのサブバッグ（ショッピング用）</li>
+        <li>常備薬・絆創膏</li>
+        <li>スーツケースの空きスペース（お土産分の余裕）</li>
+        <li>KTXの予約確認書（電子チケット）</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="subhead2">💬 使えるひとこと韓国語</h3>
+      <div class="phrase-box">
+        <div class="phrase-row"><span class="kr">アンニョンハセヨ</span><span class="jp">こんにちは</span></div>
+        <div class="phrase-row"><span class="kr">カムサハムニダ</span><span class="jp">ありがとうございます</span></div>
+        <div class="phrase-row"><span class="kr">イゴ オルマエヨ？</span><span class="jp">これいくらですか？</span></div>
+        <div class="phrase-row"><span class="kr">カッカ ジュセヨ</span><span class="jp">安くしてください</span></div>
+        <div class="phrase-row"><span class="kr">マシッソヨ</span><span class="jp">おいしいです</span></div>
+        <div class="phrase-row"><span class="kr">イゴ ポジャンヘ ジュセヨ</span><span class="jp">これ、包んでください</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-tab">釜山→ソウル母息子楽しい韓国旅 ・ PREP</div>
+</div>
+
+</body>
+</html>
